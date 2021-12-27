@@ -57,14 +57,14 @@ public final class ChildInputData {
 
     @Override
     public String toString() {
-        return "ChildInputData{" +
-                "id=" + id +
-                ", lastName='" + lastName + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", age=" + age +
-                ", city=" + city +
-                ", niceScore=" + niceScore +
-                ", giftPreferences=" + giftPreferences +
-                '}';
+        return "ChildInputData{"
+                + "id=" + id
+                + ", lastName='" + lastName + '\''
+                + ", firstName='" + firstName + '\''
+                + ", age=" + age
+                + ", city=" + city
+                + ", niceScore=" + niceScore
+                + ", giftPreferences=" + giftPreferences
+                + '}';
     }
 }

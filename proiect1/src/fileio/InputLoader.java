@@ -94,11 +94,14 @@ public final class InputLoader {
         ArrayList<ChildUpdateInputData> updates = new ArrayList<>();
         if (jsonChildrenUpdates != null) {
             for (Object jsonIterator : jsonChildrenUpdates) {
+                Double niceScore = null;
+                if(((JSONObject) jsonIterator).get(Constants.NICE_SCORE) != null) {
+                    niceScore = Double.parseDouble(((JSONObject) jsonIterator)
+                            .get(Constants.NICE_SCORE).toString());
+                }
                 updates.add(new ChildUpdateInputData(
                         Integer.parseInt(((JSONObject) jsonIterator)
-                                .get(Constants.ID).toString()),
-                        Double.parseDouble(((JSONObject) jsonIterator)
-                                .get(Constants.NICE_SCORE).toString()),
+                                .get(Constants.ID).toString()), niceScore,
                         Utils.convertJSONArray((JSONArray) ((JSONObject) jsonIterator)
                                 .get(Constants.GIFTS_PREFERENCES))
                 ));

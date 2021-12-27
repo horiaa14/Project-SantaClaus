@@ -3,9 +3,27 @@
   <component name="ChangeListManager">
     <list default="true" id="d662010a-d6c5-4bb5-92a6-5b13c2206c94" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/children/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkstyle.txt" beforeDir="false" afterPath="$PROJECT_DIR$/checkstyle.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/children/AverageScoreCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/children/AverageScoreCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/children/AverageScoreImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/children/AverageScoreImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/children/Baby.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/children/Baby.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/children/Child.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/children/Child.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/children/ChildFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/children/ChildFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/children/ChildInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/children/ChildInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/children/Kid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/children/Kid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/children/Teen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/children/Teen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gift/Gift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gift/Gift.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/ChildrenDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/ChildrenDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/GiftsDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/GiftsDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileio/ChildInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/ChildInputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileio/ChildUpdateInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/ChildUpdateInputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileio/GiftInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/GiftInputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileio/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/Input.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileio/InputLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/InputLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileio/SimulationInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/SimulationInputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileio/UpdateInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/UpdateInputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +111,9 @@
       <workItem from="1640386546518" duration="3465000" />
       <workItem from="1640452245433" duration="590000" />
       <workItem from="1640461229428" duration="12299000" />
-      <workItem from="1640528427422" duration="32346000" />
+      <workItem from="1640528427422" duration="34830000" />
+      <workItem from="1640611993390" duration="4979000" />
+      <workItem from="1640627774062" duration="3746000" />
     </task>
     <servers />
   </component>
@@ -110,5 +130,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

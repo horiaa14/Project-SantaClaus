@@ -38,11 +38,11 @@ public final class UpdateInputData {
 
     @Override
     public String toString() {
-        return "UpdateInputData{" +
-                "newSantaBudget=" + newSantaBudget +
-                ", newGifts=" + newGifts +
-                ", newChildren=" + newChildren +
-                ", childrenUpdates=" + childrenUpdates +
-                '}';
+        return "UpdateInputData{"
+                + "newSantaBudget=" + newSantaBudget
+                + ", newGifts=" + newGifts
+                + ", newChildren=" + newChildren
+                + ", childrenUpdates=" + childrenUpdates
+                + '}';
     }
 }

@@ -30,10 +30,10 @@ public final class ChildUpdateInputData {
 
     @Override
     public String toString() {
-        return "ChildUpdateInputData{" +
-                "id=" + id +
-                ", niceScore=" + niceScore +
-                ", giftsPreferences=" + giftsPreferences +
-                '}';
+        return "ChildUpdateInputData{"
+                + "id=" + id
+                + ", niceScore=" + niceScore
+                + ", giftsPreferences=" + giftsPreferences
+                + '}';
     }
 }

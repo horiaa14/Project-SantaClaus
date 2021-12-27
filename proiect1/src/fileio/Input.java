@@ -43,11 +43,11 @@ public final class Input {
 
     @Override
     public String toString() {
-        return "Input{" +
-                "simulationData=" + simulationData +
-                ", childrenData=" + childrenData +
-                ", giftsData=" + giftsData +
-                ", annualChangesData=" + annualChangesData +
-                '}';
+        return "Input{"
+                + "simulationData=" + simulationData
+                + ", childrenData=" + childrenData
+                + ", giftsData=" + giftsData
+                + ", annualChangesData=" + annualChangesData
+                + '}';
     }
 }

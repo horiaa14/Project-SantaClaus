@@ -1,6 +1,12 @@
 package main;
 
 import checker.Checker;
+import common.Constants;
+import fileio.Input;
+import fileio.InputLoader;
+
+import java.io.File;
+import java.util.Objects;
 
 /**
  * Class used to run the code
@@ -16,6 +22,7 @@ public final class Main {
      *          the arguments used to call the main method
      */
     public static void main(final String[] args) {
+
         Checker.calculateScore();
     }
 }

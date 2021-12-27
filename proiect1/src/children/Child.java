@@ -7,7 +7,7 @@ import gift.Gift;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-public class Child implements ChildInterface{
+public abstract class Child implements ChildInterface {
     private Integer id;
     private String lastName;
     private String firstName;
@@ -20,7 +20,9 @@ public class Child implements ChildInterface{
     private Double assignedBudget;
     private ArrayList<Gift> receivedGifts;
 
-    public Child() {}
+    public Child() {
+
+    }
 
     public Child(final Integer id, final String lastName,
                  final String firstName, final Integer age, final Cities city,
@@ -41,11 +43,9 @@ public class Child implements ChildInterface{
     }
 
     @Override
-    public Double accept(AverageScoreCalculator calculator) {
-        return null;
-    }
+    public abstract Double accept(AverageScoreCalculator calculator);
 
-    public ArrayList<Double> getNiceScoreHistory() {
+    public final ArrayList<Double> getNiceScoreHistory() {
         return niceScoreHistory;
     }
 }

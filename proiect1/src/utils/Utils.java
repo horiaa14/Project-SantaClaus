@@ -7,8 +7,13 @@ import org.json.simple.JSONArray;
 import java.util.LinkedList;
 
 public final class Utils {
-    private Utils() {}
+    private Utils() {
 
+    }
+
+    /**
+     * The method transforms a String into an enum object (Cities)
+     */
     public static Cities stringToCities(final String strCities) {
         return switch (strCities) {
             case "Bucuresti" -> Cities.BUCURESTI;
@@ -25,6 +30,9 @@ public final class Utils {
         };
     }
 
+    /**
+     * The method transforms a String into an enum object (Category)
+     */
     public static Category stringToCategory(final String strCategory) {
         return switch (strCategory) {
             case "Board Games" -> Category.BOARD_GAMES;

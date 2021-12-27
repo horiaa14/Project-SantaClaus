@@ -28,10 +28,10 @@ public final class GiftInputData {
 
     @Override
     public String toString() {
-        return "GiftInputData{" +
-                "productName='" + productName + '\'' +
-                ", price=" + price +
-                ", category=" + category +
-                '}';
+        return "GiftInputData{"
+                + "productName='" + productName + '\''
+                + ", price=" + price
+                + ", category=" + category
+                + '}';
     }
 }

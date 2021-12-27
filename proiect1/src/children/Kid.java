@@ -5,10 +5,10 @@ import enums.Cities;
 
 import java.util.LinkedList;
 
-public class Kid extends Child implements ChildInterface{
-    public Kid(Integer id, String lastName, String firstName, Integer age,
-               Cities city, Double niceScore,
-               LinkedList<Category> giftPreferences) {
+public final class Kid extends Child implements ChildInterface {
+    public Kid(final Integer id, final String lastName, final String firstName,
+               final Integer age, final Cities city, final Double niceScore,
+               final LinkedList<Category> giftPreferences) {
         super(id, lastName, firstName, age, city, niceScore, giftPreferences);
     }
 
@@ -17,7 +17,7 @@ public class Kid extends Child implements ChildInterface{
     }
 
     @Override
-    public Double accept(AverageScoreCalculator calculator) {
+    public Double accept(final AverageScoreCalculator calculator) {
         return calculator.getAverageScore(this);
     }
 }

@@ -20,9 +20,9 @@ public final class SimulationInputData {
 
     @Override
     public String toString() {
-        return "SimulationInputData{" +
-                "numberOfYears=" + numberOfYears +
-                ", santaBudget=" + santaBudget +
-                '}';
+        return "SimulationInputData{"
+                + "numberOfYears=" + numberOfYears
+                + ", santaBudget=" + santaBudget
+                + '}';
     }
 }
