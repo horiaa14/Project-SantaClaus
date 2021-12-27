@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d662010a-d6c5-4bb5-92a6-5b13c2206c94" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/children/AverageScoreCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/children/AverageScoreImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/children/Baby.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/children/Child.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/children/ChildFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/children/ChildInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/children/Kid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/children/Teen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/children/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/children/Test.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gift/Gift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gift/Gift.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +42,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="proiect1" />
@@ -78,8 +71,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Test" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -99,11 +92,23 @@
       <workItem from="1640378295566" duration="3237000" />
       <workItem from="1640386546518" duration="3465000" />
       <workItem from="1640452245433" duration="590000" />
-      <workItem from="1640461229428" duration="11626000" />
+      <workItem from="1640461229428" duration="12299000" />
+      <workItem from="1640528427422" duration="32346000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
