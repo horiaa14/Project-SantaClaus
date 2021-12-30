@@ -18,7 +18,7 @@ public final class ChildFactory {
             return new Baby();
         } else if (age < Constants.MAX_AGE_KID) {
             return new Kid();
-        } else if (age < Constants.MAX_AGE_TEEN) {
+        } else if (age <= Constants.MAX_AGE_TEEN) {
             return new Teen();
         }
 

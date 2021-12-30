@@ -15,7 +15,6 @@ public final class InputLoader {
     /**
      * The path to the input file
      */
-
     private final String inputPath;
 
     public InputLoader(final String inputPath) {
@@ -27,11 +26,12 @@ public final class InputLoader {
     }
 
     /**
-     * This method reads all the data from the json file
+     * Reading the general information: the number of rounds and the initial
+     * budget of Santa Claus. The method constructs an object of type
+     * SimulationInputData that encapsulates this two pieces of information.
      *
-     * @return an Input object
+     * @return an object of type SimulationInputData that contains two fields.
      */
-
     public SimulationInputData parseSimulationData(final JSONObject jsonObject) {
         SimulationInputData generalData;
         generalData = new SimulationInputData(
@@ -44,6 +44,14 @@ public final class InputLoader {
         return generalData;
     }
 
+    /**
+     * Reading information about children: The method builds an ArrayList
+     * that stores all the information needed for each child. We will extract
+     * the fields from the json file, call the constructor to form a
+     * ChildInputData object and add it to the end of the ArrayList.
+     *
+     * @return an ArrayList containing information about children.
+     */
     public ArrayList<ChildInputData> parseChildrenData(final JSONArray jsonChildren) {
         ArrayList<ChildInputData> children = new ArrayList<>();
         if (jsonChildren != null) {
@@ -70,6 +78,14 @@ public final class InputLoader {
         return children;
     }
 
+    /**
+     * Reading information about gifts: This method builds an ArrayList
+     * that encapsulates the name, price and category for each gift. We read
+     * the three fields and call the constructor of the GiftInputData class.
+     * Once this object is built, we will add it to the end of the ArrayList.
+     *
+     * @return an ArrayList containing information about gifts.
+     */
     public ArrayList<GiftInputData> parseGiftsData(final JSONArray jsonGifts) {
         ArrayList<GiftInputData> gifts = new ArrayList<>();
         if (jsonGifts != null) {
@@ -88,6 +104,13 @@ public final class InputLoader {
         return gifts;
     }
 
+    /**
+     * In this method we want to build an ArrayList to store the information
+     * about the changes in a year: id, niceScore and giftsPreferences for
+     * a child. We take care to treat the case when niceScore is null.
+     *
+     * @return an ArrayList containing information about children's updates.
+     */
     public ArrayList<ChildUpdateInputData> parseChildrenUpdates(
             final JSONArray jsonChildrenUpdates) {
 
@@ -95,7 +118,7 @@ public final class InputLoader {
         if (jsonChildrenUpdates != null) {
             for (Object jsonIterator : jsonChildrenUpdates) {
                 Double niceScore = null;
-                if(((JSONObject) jsonIterator).get(Constants.NICE_SCORE) != null) {
+                if (((JSONObject) jsonIterator).get(Constants.NICE_SCORE) != null) {
                     niceScore = Double.parseDouble(((JSONObject) jsonIterator)
                             .get(Constants.NICE_SCORE).toString());
                 }
@@ -111,6 +134,15 @@ public final class InputLoader {
         return updates;
     }
 
+    /**
+     * In this method we parse the following information corresponding to a
+     * change: the new budget of Santa Claus, the list of new gifts, the list of
+     * new children, the list of updates. We read this information, call the
+     * constructor of the UpdateInputData class and retain this new object
+     * in the ArrayList for all annual changes.
+     *
+     * @return an ArrayList which contains the changes from all the years.
+     */
     public ArrayList<UpdateInputData> parseAnnualChangesData(final JSONArray jsonUpdates) {
         ArrayList<UpdateInputData> annualChanges = new ArrayList<>();
         if (jsonUpdates != null) {
@@ -148,6 +180,14 @@ public final class InputLoader {
 
     }
 
+    /**
+     * In this function we build the object which will retain all the
+     * information needed to implement the simulation. We will use the methods
+     * defined above to parse the json file.
+     *
+     * @return an Input object that stores all the data needed for the
+     * simulation.
+     */
     public Input readData() {
         JSONParser jsonParser = new JSONParser();
         SimulationInputData generalData = null;

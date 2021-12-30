@@ -43,6 +43,9 @@ public final class Constants {
     public static final String CHILDREN_UPDATES = "childrenUpdates";
 
     public static final String TESTS_PATH = "tests/";
+    public static final String RESULT_PATH = "output";
+    public static final Integer START_INDEX = 4;
+    public static final Integer INVALID_POSITION = -1;
 
     private Constants() {
         //constructor for checkstyle

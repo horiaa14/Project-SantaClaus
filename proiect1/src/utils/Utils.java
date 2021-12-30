@@ -6,6 +6,10 @@ import org.json.simple.JSONArray;
 
 import java.util.LinkedList;
 
+/**
+ * The class contains methods that helps with parsing
+ */
+
 public final class Utils {
     private Utils() {
 
@@ -45,6 +49,12 @@ public final class Utils {
         };
     }
 
+    /**
+     * This method transforms an array of JSON's into a LinkedList of type
+     * Category
+     * @param array of JSONs
+     * @return a LinkedList of type Category (enum)
+     */
     public static LinkedList<Category> convertJSONArray(final JSONArray array) {
         if (array == null) {
             return null;
@@ -56,5 +66,17 @@ public final class Utils {
         }
 
         return result;
+    }
+
+    public static void removeDuplicates(final LinkedList<Category> list) {
+        LinkedList<Category> uniqueElements = new LinkedList<>();
+        for (Category currCategory : list) {
+            if (!uniqueElements.contains(currCategory)) {
+                uniqueElements.add(currCategory);
+            }
+        }
+
+        list.clear();
+        list.addAll(uniqueElements);
     }
 }

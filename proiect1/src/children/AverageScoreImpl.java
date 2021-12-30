@@ -36,7 +36,7 @@ public final class AverageScoreImpl implements AverageScoreCalculator {
         double den;
         ArrayList<Double> niceScoreList = teen.getNiceScoreHistory();
         for (int i = 0; i < niceScoreList.size(); ++i) {
-            num += niceScoreList.get(i) * (i + 1);
+            num += (niceScoreList.get(i) * (i + 1));
         }
 
         den = (niceScoreList.size() * (1 + niceScoreList.size())) / 2.0;
