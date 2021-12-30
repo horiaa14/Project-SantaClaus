@@ -25,28 +25,11 @@ public abstract class Child implements ChildInterface {
 
     }
 
-    @Override
-    public String toString() {
-        return "Child{" +
-                "id=" + id +
-                ", lastName='" + lastName + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", age=" + age +
-                ", city=" + city +
-                ", niceScore=" + niceScore +
-                ", giftPreferences=" + giftPreferences +
-                ", averageScore=" + averageScore +
-                ", niceScoreHistory=" + niceScoreHistory +
-                ", assignedBudget=" + assignedBudget +
-                ", receivedGifts=" + receivedGifts +
-                '}';
-    }
-
-    public void setAge(Integer age) {
+    public final void setAge(final Integer age) {
         this.age = age;
     }
 
-    public void copyFields(Child child) {
+    public final void copyFields(final Child child) {
         this.id = child.id;
         this.lastName = child.lastName;
         this.firstName = child.firstName;
@@ -60,7 +43,7 @@ public abstract class Child implements ChildInterface {
         this.receivedGifts = child.receivedGifts;
     }
 
-    public void setFields(ChildInputData child) {
+    public final void setFields(final ChildInputData child) {
         this.id = child.getId();
         this.lastName = child.getLastName();
         this.firstName = child.getFirstName();
@@ -80,7 +63,7 @@ public abstract class Child implements ChildInterface {
         return niceScoreHistory;
     }
 
-    public final void setAverageScore(Double averageScore) {
+    public final void setAverageScore(final Double averageScore) {
         this.averageScore = averageScore;
     }
 
@@ -104,19 +87,19 @@ public abstract class Child implements ChildInterface {
         return giftPreferences;
     }
 
-    public Cities getCity() {
+    public final Cities getCity() {
         return city;
     }
 
-    public Double getNiceScore() {
+    public final Double getNiceScore() {
         return niceScore;
     }
 
-    public String getLastName() {
+    public final String getLastName() {
         return lastName;
     }
 
-    public String getFirstName() {
+    public final String getFirstName() {
         return firstName;
     }
 
@@ -124,11 +107,11 @@ public abstract class Child implements ChildInterface {
         niceScoreHistory.add(score);
     }
 
-    public Integer getId() {
+    public final Integer getId() {
         return id;
     }
 
-    public final void setAssignedBudget(Double assignedBudget) {
+    public final void setAssignedBudget(final Double assignedBudget) {
         this.assignedBudget = assignedBudget;
     }
 }

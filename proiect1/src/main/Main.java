@@ -47,21 +47,22 @@ public final class Main {
         File outputDirectory = new File(Constants.RESULT_PATH);
         deleteFiles(outputDirectory.listFiles());
         for (File file : Objects.requireNonNull(inputDirectory.listFiles())) {
-            String filePath = Constants.OUTPUT_PATH + file.getName().substring
-                                (Constants.START_INDEX);
+            String filePath = Constants.OUTPUT_PATH + file.getName().substring(
+                              Constants.START_INDEX);
 
             File out = new File(filePath);
             boolean isCreated = out.createNewFile();
 
             if (isCreated) {
-                action(file.getAbsolutePath(), filePath);
+                action(file.getAbsolutePath(), out);
             }
         }
 
         Checker.calculateScore();
     }
 
-    public static void action(final String inputFile, final String outputFile) {
+    public static void action(final String inputFile, final File outFile)
+                              throws IOException {
         InputLoader inputLoader = new InputLoader(inputFile);
         Input input = inputLoader.readData();
 
@@ -70,6 +71,6 @@ public final class Main {
                         input.getSimulationData().getSantaBudget(),
                         input.getAnnualChangesData());
 
-        simulation.executeSimulation(input, outputFile);
+        simulation.executeSimulation(input, outFile);
     }
 }

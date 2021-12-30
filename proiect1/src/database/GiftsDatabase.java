@@ -29,7 +29,7 @@ public final class GiftsDatabase implements Observer {
     }
 
     @Override
-    public void update(UpdateInputData annualChange) {
+    public void update(final UpdateInputData annualChange) {
         ArrayList<GiftInputData> newGifts = annualChange.getNewGifts();
         for (GiftInputData currGift : newGifts) {
             Gift newGift = new Gift(currGift.getProductName(),

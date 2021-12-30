@@ -6,10 +6,15 @@ import children.Child;
 import database.ChildrenDatabase;
 import database.GiftsDatabase;
 import enums.Category;
+import fileio.AnnualChildrenOutput;
+import fileio.ChildListOutput;
 import fileio.Input;
 import fileio.UpdateInputData;
+import fileio.Writer;
 import gift.Gift;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -19,7 +24,7 @@ public final class Simulation implements Subject {
     private final ArrayList<Observer> observers;
     private Double santaBudget;
 
-    public Simulation(final Integer numberOfYears, Double santaBudget,
+    public Simulation(final Integer numberOfYears, final Double santaBudget,
                       final ArrayList<UpdateInputData> annualChanges) {
         this.numberOfYears = numberOfYears;
         this.santaBudget = santaBudget;
@@ -54,11 +59,12 @@ public final class Simulation implements Subject {
         addObserver(giftsDatabase);
     }
 
-    public void executeSimulation(final Input input, final String outputFile) {
+    public void executeSimulation(final Input input, final File outFile)
+                                  throws IOException {
         ChildrenDatabase childrenDatabase = ChildrenDatabase.getUniqueInstance();
         GiftsDatabase giftsDatabase = GiftsDatabase.getUniqueInstance();
         initSimulation(input, childrenDatabase, giftsDatabase);
-        simulateRounds(childrenDatabase, giftsDatabase, outputFile);
+        simulateRounds(childrenDatabase, giftsDatabase, outFile);
     }
 
     public void calculateAverageScore(final ChildrenDatabase childrenDtb) {
@@ -89,8 +95,8 @@ public final class Simulation implements Subject {
 
         Gift gift = null;
         for (Gift currGift : gifts) {
-            if (currGift.getCategory() == category &&
-                    currGift.getPrice() <= budget) {
+            if (currGift.getCategory() == category
+                    && currGift.getPrice() <= budget) {
                 if (gift == null) {
                     gift = currGift;
                 } else if (currGift.getPrice() < gift.getPrice()) {
@@ -120,24 +126,37 @@ public final class Simulation implements Subject {
         }
     }
 
+    void updateAnnualChildrenList(final AnnualChildrenOutput annualChildrenList,
+                                  final ArrayList<Child> children) {
+        ChildListOutput list = new ChildListOutput();
+        list.completeList(children);
+        annualChildrenList.addChildrenList(list);
+    }
+
     public void simulateRounds(final ChildrenDatabase childrenDtb,
                                final GiftsDatabase giftsDtb,
-                               final String outputFile) {
+                               final File outFile) throws IOException {
+
+        Writer writer = new Writer();
+        AnnualChildrenOutput annualChildrenList = new AnnualChildrenOutput();
 
         for (int currRound = 0; currRound <= numberOfYears; ++currRound) {
             calculateAverageScore(childrenDtb);
             calculateBudgetForChildren(childrenDtb.getChild());
             distributeGifts(childrenDtb.getChild(), giftsDtb.getGift());
-            // Write
-            System.out.println(childrenDtb);
+
+           updateAnnualChildrenList(annualChildrenList, childrenDtb.getChild());
+
             if (currRound < numberOfYears) {
                 santaBudget = annualChanges.get(currRound).getNewSantaBudget();
                 notifyObservers(annualChanges.get(currRound));
             }
         }
+
+        writer.printJSON(outFile, annualChildrenList);
     }
 
-    public void setSantaBudget(Double santaBudget) {
+    public void setSantaBudget(final Double santaBudget) {
         this.santaBudget = santaBudget;
     }
 }

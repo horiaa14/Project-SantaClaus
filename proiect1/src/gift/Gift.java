@@ -15,21 +15,22 @@ public class Gift {
         this.category = category;
     }
 
-    public Category getCategory() {
+    public final String getProductName() {
+        return productName;
+    }
+
+    public Gift(final Gift gift) {
+        this.productName = gift.productName;
+        this.price = gift.price;
+        this.category = gift.category;
+    }
+
+    public final Category getCategory() {
         return category;
     }
 
-    public Double getPrice() {
+    public final Double getPrice() {
         return price;
-    }
-
-    @Override
-    public String toString() {
-        return "Gift{" +
-                "productName='" + productName + '\'' +
-                ", price=" + price +
-                ", category=" + category +
-                '}';
     }
 
     public Gift(final GiftInputData currGift) {

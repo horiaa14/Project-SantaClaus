@@ -9,8 +9,11 @@ import fileio.ChildUpdateInputData;
 import fileio.UpdateInputData;
 import simulation.Observer;
 import utils.Utils;
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.Objects;
+import java.util.Iterator;
 
 public final class ChildrenDatabase implements Observer {
     private final ArrayList<Child> child;
@@ -67,13 +70,6 @@ public final class ChildrenDatabase implements Observer {
         return Constants.INVALID_POSITION;
     }
 
-    @Override
-    public String toString() {
-        return "ChildrenDatabase{" +
-                "child=" + child +
-                '}';
-    }
-
     public void updateChildren(final ArrayList<ChildUpdateInputData> childrenUpdates) {
         for (ChildUpdateInputData currUpdate : childrenUpdates) {
             int pos = contains(currUpdate.getId());
@@ -96,7 +92,7 @@ public final class ChildrenDatabase implements Observer {
     }
 
     @Override
-    public void update(UpdateInputData annualChange) {
+    public void update(final UpdateInputData annualChange) {
         increaseAge();
         addNewChildren(annualChange.getNewChildren());
         updateChildren(annualChange.getChildrenUpdates());
