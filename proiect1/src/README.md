@@ -140,6 +140,10 @@ putând fi dedus cu ușurință.
     operații\
     am preferat implementarea altor clase.
 
+    * Pachetul ***main***: Acest pachet conține clasa Main, aceasta reprezentând
+    \
+    punctul de început al programului. 
+
 ---
 
 ## ***Observații generale:***
