@@ -1,5 +1,10 @@
 package fileio;
 
+/**
+ * This class is used to read general information about simulation:
+ * the number of years and Santa's initial budget.
+ */
+
 public final class SimulationInputData {
     private final Integer numberOfYears;
     private final Double santaBudget;
@@ -16,13 +21,5 @@ public final class SimulationInputData {
 
     public Double getSantaBudget() {
         return santaBudget;
-    }
-
-    @Override
-    public String toString() {
-        return "SimulationInputData{"
-                + "numberOfYears=" + numberOfYears
-                + ", santaBudget=" + santaBudget
-                + '}';
     }
 }

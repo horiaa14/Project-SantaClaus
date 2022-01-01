@@ -29,6 +29,11 @@ public abstract class Child implements ChildInterface {
         this.age = age;
     }
 
+    /**
+     * The method copies the fields of the received object as a parameter
+     * to the current object. This is used in the function that updates the
+     * ages of the children at the end of the rounds.
+     */
     public final void copyFields(final Child child) {
         this.id = child.id;
         this.lastName = child.lastName;
@@ -43,6 +48,10 @@ public abstract class Child implements ChildInterface {
         this.receivedGifts = child.receivedGifts;
     }
 
+    /**
+     * This method copies the fields of the read object to the current object.
+     * It is used to add new children to the database.
+     */
     public final void setFields(final ChildInputData child) {
         this.id = child.getId();
         this.lastName = child.getLastName();
@@ -54,6 +63,14 @@ public abstract class Child implements ChildInterface {
         this.niceScoreHistory = new ArrayList<>();
         this.receivedGifts = new ArrayList<>();
         this.niceScoreHistory.add(niceScore);
+    }
+
+    /**
+     * The function is used to add a new nice score to the current child's
+     * score list.
+     */
+    public final void addNiceScore(final Double score) {
+        niceScoreHistory.add(score);
     }
 
     @Override
@@ -101,10 +118,6 @@ public abstract class Child implements ChildInterface {
 
     public final String getFirstName() {
         return firstName;
-    }
-
-    public final void addNiceScore(final Double score) {
-        niceScoreHistory.add(score);
     }
 
     public final Integer getId() {

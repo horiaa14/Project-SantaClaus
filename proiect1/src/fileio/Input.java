@@ -2,18 +2,17 @@ package fileio;
 
 import java.util.ArrayList;
 
+/**
+ * This class contains fields for reading all the information from the input
+ * files. After parsing a json file, we will return an object of type
+ * Input
+ */
+
 public final class Input {
     private final SimulationInputData simulationData;
     private final ArrayList<ChildInputData> childrenData;
     private final ArrayList<GiftInputData> giftsData;
     private final ArrayList<UpdateInputData> annualChangesData;
-
-    public Input() {
-        this.simulationData = null;
-        this.childrenData = null;
-        this.giftsData = null;
-        this.annualChangesData = null;
-    }
 
     public Input(final SimulationInputData simulationData,
                  final ArrayList<ChildInputData> childrenData,
@@ -39,15 +38,5 @@ public final class Input {
 
     public ArrayList<UpdateInputData> getAnnualChangesData() {
         return annualChangesData;
-    }
-
-    @Override
-    public String toString() {
-        return "Input{"
-                + "simulationData=" + simulationData
-                + ", childrenData=" + childrenData
-                + ", giftsData=" + giftsData
-                + ", annualChangesData=" + annualChangesData
-                + '}';
     }
 }

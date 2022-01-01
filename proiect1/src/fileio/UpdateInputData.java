@@ -2,6 +2,11 @@ package fileio;
 
 import java.util.ArrayList;
 
+/**
+ * In this class we find the necessary fields for reading information about
+ * an update.
+ */
+
 public final class UpdateInputData {
     private final Double newSantaBudget;
     private final ArrayList<GiftInputData> newGifts;
@@ -34,15 +39,5 @@ public final class UpdateInputData {
 
     public ArrayList<ChildUpdateInputData> getChildrenUpdates() {
         return childrenUpdates;
-    }
-
-    @Override
-    public String toString() {
-        return "UpdateInputData{"
-                + "newSantaBudget=" + newSantaBudget
-                + ", newGifts=" + newGifts
-                + ", newChildren=" + newChildren
-                + ", childrenUpdates=" + childrenUpdates
-                + '}';
     }
 }

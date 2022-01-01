@@ -11,6 +11,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * The class reads and parses the data from the tests.
+ */
+
 public final class InputLoader {
     /**
      * The path to the input file
@@ -21,15 +25,10 @@ public final class InputLoader {
         this.inputPath = inputPath;
     }
 
-    public String getInputPath() {
-        return inputPath;
-    }
-
     /**
      * Reading the general information: the number of rounds and the initial
      * budget of Santa Claus. The method constructs an object of type
-     * SimulationInputData that encapsulates this two pieces of information.
-     *
+     * SimulationInputData that encapsulates this information.
      * @return an object of type SimulationInputData that contains two fields.
      */
     public SimulationInputData parseSimulationData(final JSONObject jsonObject) {

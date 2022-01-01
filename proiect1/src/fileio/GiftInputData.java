@@ -2,6 +2,10 @@ package fileio;
 
 import enums.Category;
 
+/**
+ * This class contains information about a gift, being used for reading
+ */
+
 public final class GiftInputData {
     private final String productName;
     private final Double price;
@@ -24,14 +28,5 @@ public final class GiftInputData {
 
     public Category getCategory() {
         return category;
-    }
-
-    @Override
-    public String toString() {
-        return "GiftInputData{"
-                + "productName='" + productName + '\''
-                + ", price=" + price
-                + ", category=" + category
-                + '}';
     }
 }

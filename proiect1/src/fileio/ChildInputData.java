@@ -5,6 +5,10 @@ import enums.Cities;
 
 import java.util.LinkedList;
 
+/**
+ * This class is used to read information about a child
+ */
+
 public final class ChildInputData {
     private final Integer id;
     private final String lastName;
@@ -53,18 +57,5 @@ public final class ChildInputData {
 
     public LinkedList<Category> getGiftPreferences() {
         return giftPreferences;
-    }
-
-    @Override
-    public String toString() {
-        return "ChildInputData{"
-                + "id=" + id
-                + ", lastName='" + lastName + '\''
-                + ", firstName='" + firstName + '\''
-                + ", age=" + age
-                + ", city=" + city
-                + ", niceScore=" + niceScore
-                + ", giftPreferences=" + giftPreferences
-                + '}';
     }
 }

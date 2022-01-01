@@ -8,6 +8,10 @@ import gift.Gift;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
+/**
+ * This class is used to write information about children in json files.
+ */
+
 public final class ChildOutput {
     private final Integer id;
     private final String lastName;

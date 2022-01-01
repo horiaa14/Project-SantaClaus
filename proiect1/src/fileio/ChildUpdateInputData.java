@@ -4,6 +4,10 @@ import enums.Category;
 
 import java.util.LinkedList;
 
+/**
+ * This class is used to read updates about children
+ */
+
 public final class ChildUpdateInputData {
     private final Integer id;
     private final Double niceScore;
@@ -26,14 +30,5 @@ public final class ChildUpdateInputData {
 
     public LinkedList<Category> getGiftsPreferences() {
         return giftsPreferences;
-    }
-
-    @Override
-    public String toString() {
-        return "ChildUpdateInputData{"
-                + "id=" + id
-                + ", niceScore=" + niceScore
-                + ", giftsPreferences=" + giftsPreferences
-                + '}';
     }
 }

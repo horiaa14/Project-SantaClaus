@@ -28,6 +28,18 @@ public final class GiftsDatabase implements Observer {
         return instance;
     }
 
+    /**
+     * The method is used to build the database that stores Santa's gifts
+     * for children. We go through the list of gifts that Santa Claus has
+     * before the simulation and add them to the database.
+     * @param gifts represents the initial list of gifts
+     */
+    public void buildGiftsDatabase(final ArrayList<GiftInputData> gifts) {
+        for (GiftInputData currGift : gifts) {
+            gift.add(new Gift(currGift));
+        }
+    }
+
     @Override
     public void update(final UpdateInputData annualChange) {
         ArrayList<GiftInputData> newGifts = annualChange.getNewGifts();
@@ -39,14 +51,7 @@ public final class GiftsDatabase implements Observer {
         }
     }
 
-    public void buildGiftsDatabase(final ArrayList<GiftInputData> gifts) {
-        for (GiftInputData currGift : gifts) {
-            gift.add(new Gift(currGift));
-        }
-    }
-
     public ArrayList<Gift> getGift() {
         return gift;
     }
-
 }

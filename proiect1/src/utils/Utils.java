@@ -67,16 +67,4 @@ public final class Utils {
 
         return result;
     }
-
-    public static void removeDuplicates(final LinkedList<Category> list) {
-        LinkedList<Category> uniqueElements = new LinkedList<>();
-        for (Category currCategory : list) {
-            if (!uniqueElements.contains(currCategory)) {
-                uniqueElements.add(currCategory);
-            }
-        }
-
-        list.clear();
-        list.addAll(uniqueElements);
-    }
 }
