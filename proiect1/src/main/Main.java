@@ -55,7 +55,7 @@ public final class Main {
         output files*/
         for (File file : Objects.requireNonNull(inputDirectory.listFiles())) {
             String filePath = Constants.OUTPUT_PATH + file.getName().substring(
-                              Constants.START_INDEX);
+                    Constants.START_INDEX);
 
             File out = new File(filePath);
             boolean isCreated = out.createNewFile();
@@ -77,9 +77,10 @@ public final class Main {
      *                 the simulation result.
      */
     public static void action(final String inputFile, final File outFile)
-                              throws IOException {
+            throws IOException {
         InputLoader inputLoader = new InputLoader(inputFile);
         Input input = inputLoader.readData();
+
 
         Simulation simulation =
                 new Simulation(input.getSimulationData().getNumberOfYears(),

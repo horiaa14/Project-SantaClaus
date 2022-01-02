@@ -142,7 +142,8 @@ public final class InputLoader {
      *
      * @return an ArrayList which contains the changes from all the years.
      */
-    public ArrayList<UpdateInputData> parseAnnualChangesData(final JSONArray jsonUpdates) {
+    public ArrayList<UpdateInputData> parseAnnualChangesData(
+                                      final JSONArray jsonUpdates) {
         ArrayList<UpdateInputData> annualChanges = new ArrayList<>();
         if (jsonUpdates != null) {
             for (Object jsonIterator : jsonUpdates) {
@@ -171,7 +172,7 @@ public final class InputLoader {
                         parseChildrenUpdates(jsonChildrenUpdates);
 
                 annualChanges.add(new UpdateInputData(newSantaBudget, newGifts,
-                                 newChildren, updates));
+                        newChildren, updates));
             }
         }
 
@@ -189,10 +190,10 @@ public final class InputLoader {
      */
     public Input readData() {
         JSONParser jsonParser = new JSONParser();
-        SimulationInputData generalData = null;
-        ArrayList<ChildInputData> children = null;
-        ArrayList<GiftInputData> gifts = null;
-        ArrayList<UpdateInputData> annualChanges = null;
+        SimulationInputData generalData = new SimulationInputData();
+        ArrayList<ChildInputData> children = new ArrayList<>();
+        ArrayList<GiftInputData> gifts = new ArrayList<>();
+        ArrayList<UpdateInputData> annualChanges = new ArrayList<>();
 
         try {
             JSONObject jsonObject = (JSONObject) jsonParser

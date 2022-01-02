@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="d662010a-d6c5-4bb5-92a6-5b13c2206c94" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proiect1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/proiect1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileio/InputLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/InputLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileio/SimulationInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/SimulationInputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simulation/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulation/Simulation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,11 +39,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/jackson-databind-2.9.7.jar" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -115,7 +121,29 @@
       <workItem from="1641047332360" duration="158000" />
       <workItem from="1641047603031" duration="361000" />
       <workItem from="1641048282359" duration="239000" />
-      <workItem from="1641048565500" duration="40000" />
+      <workItem from="1641048565500" duration="107000" />
+      <workItem from="1641048706467" duration="22000" />
+      <workItem from="1641049178934" duration="842000" />
+      <workItem from="1641050082685" duration="374000" />
+      <workItem from="1641050485801" duration="30000" />
+      <workItem from="1641050740248" duration="1857000" />
+      <workItem from="1641053151898" duration="1036000" />
+      <workItem from="1641054323791" duration="532000" />
+      <workItem from="1641054994477" duration="406000" />
+      <workItem from="1641055448987" duration="89000" />
+      <workItem from="1641055823376" duration="1000" />
+      <workItem from="1641056993612" duration="77000" />
+      <workItem from="1641060996476" duration="2472000" />
+      <workItem from="1641063786878" duration="354000" />
+      <workItem from="1641064345524" duration="157000" />
+      <workItem from="1641064720089" duration="215000" />
+      <workItem from="1641065158412" duration="178000" />
+      <workItem from="1641065560736" duration="317000" />
+      <workItem from="1641066173199" duration="164000" />
+      <workItem from="1641066543863" duration="445000" />
+      <workItem from="1641067175753" duration="1603000" />
+      <workItem from="1641081541994" duration="2625000" />
+      <workItem from="1641084462150" duration="2071000" />
     </task>
     <servers />
   </component>
@@ -133,5 +161,16 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/fileio/InputLoader.java</url>
+          <line>191</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

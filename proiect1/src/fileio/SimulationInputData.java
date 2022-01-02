@@ -9,6 +9,11 @@ public final class SimulationInputData {
     private final Integer numberOfYears;
     private final Double santaBudget;
 
+    public SimulationInputData() {
+        numberOfYears = 0;
+        santaBudget = 0.0;
+    }
+
     public SimulationInputData(final Integer numberOfYears,
                                final Double santaBudget) {
         this.numberOfYears = numberOfYears;

@@ -1,5 +1,6 @@
 package simulation;
 
+
 import children.AverageScoreCalculator;
 import children.AverageScoreImpl;
 import children.Child;
@@ -7,11 +8,12 @@ import database.ChildrenDatabase;
 import database.GiftsDatabase;
 import enums.Category;
 import fileio.AnnualChildrenOutput;
-import fileio.ChildListOutput;
 import fileio.Input;
+import fileio.ChildListOutput;
 import fileio.UpdateInputData;
 import fileio.Writer;
 import gift.Gift;
+
 
 import java.io.File;
 import java.io.IOException;
